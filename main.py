@@ -11,7 +11,6 @@ def find_python_dev_jobs():
     soup = BeautifulSoup(html_text, 'lxml')
 
     jobs = soup.find_all('div', class_='col-sm-12 col-md-7 col-lg-8 col-xl-9')
-    #print(job)
     for index, job in enumerate(jobs):   
         posting_date = job.find('div', class_ = 'job-card_jobResultHeading__postedBy__sK_25').text
         if 'days ago' in posting_date: 
